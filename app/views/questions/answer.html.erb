@@ -1,0 +1,15 @@
+<div class="text-center">
+  <h2>
+    <% if @answer.capitalize == "I am going to work right now!" %>
+      <%= "ok!" %>
+    <% elsif @answer.end_with?("?") %>
+      <%= "Silly question, get dressed and go to work!" %>
+    <% else %>
+      <%= "I don't care, get dressed and go to work!" %>
+    <% end %>
+  </h2>
+</div>
+
+<div class="text-center">
+  <%= link_to "Ask to your coach", ask_path , class: "btn btn-primary" %>
+</div>
